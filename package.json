@@ -1,7 +1,7 @@
 {
-  "name": "teched2019-opa",
+  "name": "opa-exercise",
   "version": "1.0.0",
-  "description": "TechEd 2019 OPA demo",
+  "description": "OPA Exercise",
   "scripts": {
     "start": "ui5 serve -o index.html",
     "test": "karma start --single-run",

@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for model/cart.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">model/</a> cart.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">8.7% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>2/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">8.7% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>2/23</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">sap.ui.define([
+	"sap/m/MessageBox",
+	"sap/m/MessageToast"
+], function (
+	MessageBox,
+	MessageToast) {
+	"use strict";
+&nbsp;
+	return {
+&nbsp;
+		/**
+		 * Checks for the status of the product that is added to the cart.
+		 * If the product is not available, a message dialog will open.
+		 * @public
+		 * @param {Object} oBundle i18n bundle
+		 * @param {Object} oProduct Product that is added to the cart
+		 * @param {Object} oCartModel Cart model
+		 */
+		addToCart: <span class="fstat-no" title="function not covered" >function (oBundle, oProduct, oCartModel) {</span>
+			// Items to be added from the welcome view have it's content inside product object
+<span class="cstat-no" title="statement not covered" >			if (oProduct.Product !== undefined) {</span>
+<span class="cstat-no" title="statement not covered" >				oProduct = oProduct.Product;</span>
+			}
+<span class="cstat-no" title="statement not covered" >			switch (oProduct.Status) {</span>
+				case "D":
+					//show message dialog
+<span class="cstat-no" title="statement not covered" >					MessageBox.show(</span>
+						oBundle.getText("productStatusDiscontinuedMsg"), {
+							icon: MessageBox.Icon.ERROR,
+							titles: oBundle.getText("productStatusDiscontinuedTitle"),
+							actions: [MessageBox.Action.CLOSE]
+						});
+<span class="cstat-no" title="statement not covered" >					break;</span>
+				case "O":
+					// show message dialog
+<span class="cstat-no" title="statement not covered" >					MessageBox.show(</span>
+						oBundle.getText("productStatusOutOfStockMsg"), {
+							icon: MessageBox.Icon.QUESTION,
+							title: oBundle.getText("productStatusOutOfStockTitle"),
+							actions: [MessageBox.Action.OK, MessageBox.Action.CANCEL],
+							onClose: <span class="fstat-no" title="function not covered" >function (oAction) {</span>
+								// order
+<span class="cstat-no" title="statement not covered" >								if (MessageBox.Action.OK === oAction) {</span>
+<span class="cstat-no" title="statement not covered" >									this._updateCartItem(oBundle, oProduct, oCartModel);</span>
+								}
+							}.bind(this)
+						});
+<span class="cstat-no" title="statement not covered" >					break;</span>
+				case "A":
+				default:
+<span class="cstat-no" title="statement not covered" >					this._updateCartItem(oBundle, oProduct, oCartModel);</span>
+<span class="cstat-no" title="statement not covered" >					break;</span>
+			}
+		},
+&nbsp;
+		/**
+		 * Function that updates the cart model when a product is added to the cart.
+		 * If the product is already in the cart the quantity is increased.
+		 * If not, the product is added to the cart with quantity 1.
+		 * @private
+		 * @param {Object} oBundle i18n bundle
+		 * @param {Object} oProductToBeAdded Product that is added to the cart
+		 * @param {Object} oCartModel Cart model
+		 */
+		_updateCartItem: <span class="fstat-no" title="function not covered" >function (oBundle, oProductToBeAdded, oCartModel) {</span>
+			// find existing entry for product
+<span class="cstat-no" title="statement not covered" >			var oCollectionEntries = Object.assign({}, oCartModel.getData()["cartEntries"]);</span>
+<span class="cstat-no" title="statement not covered" >			var oCartEntry =  oCollectionEntries[oProductToBeAdded.ProductId];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >			if (oCartEntry === undefined) {</span>
+				// create new entry
+<span class="cstat-no" title="statement not covered" >				oCartEntry = Object.assign({}, oProductToBeAdded);</span>
+<span class="cstat-no" title="statement not covered" >				oCartEntry.Quantity = 1;</span>
+<span class="cstat-no" title="statement not covered" >				oCollectionEntries[oProductToBeAdded.ProductId] = oCartEntry;</span>
+			} else {
+				// update existing entry
+<span class="cstat-no" title="statement not covered" >				oCartEntry.Quantity += 1;</span>
+			}
+			//update the cart model
+<span class="cstat-no" title="statement not covered" >			oCartModel.setProperty("/cartEntries", Object.assign({}, oCollectionEntries));</span>
+<span class="cstat-no" title="statement not covered" >			oCartModel.refresh(true);</span>
+<span class="cstat-no" title="statement not covered" >			MessageToast.show(oBundle.getText("productMsgAddedToCart", [oProductToBeAdded.Name] ));</span>
+		}
+	};
+});</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Feb 19 2020 11:34:54 GMT+0200 (Eastern European Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for controller/Welcome.controller.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">controller/</a> Welcome.controller.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">63.64% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>28/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">56.25% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>9/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">61.54% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">63.64% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>28/44</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">sap.ui.define([
+	"./BaseController",
+	"../model/cart",
+	"sap/ui/model/json/JSONModel",
+	"sap/ui/model/Filter",
+	"../model/formatter"
+], function (BaseController, cart, JSONModel, Filter, formatter) {
+	"use strict";
+&nbsp;
+	return BaseController.extend("sap.ui.demo.cart.controller.Welcome", {
+&nbsp;
+		_iCarouselTimeout: 0, // a pointer to the current timeout
+		_iCarouselLoopTime: 8000, // loop to next picture after 8 seconds
+&nbsp;
+		formatter: formatter,
+&nbsp;
+		_mFilters: {
+			Promoted: [new Filter("Type", "EQ", "Promoted")],
+			Viewed: [new Filter("Type", "EQ", "Viewed")],
+			Favorite: [new Filter("Type", "EQ", "Favorite")]
+		},
+&nbsp;
+		onInit: function () {
+			var oViewModel = new JSONModel({
+				welcomeCarouselShipping: 'sap/ui/demo/cart/img/ShopCarouselShipping.jpg',
+				welcomeCarouselInviteFriend: 'sap/ui/demo/cart/img/ShopCarouselInviteFriend.jpg',
+				welcomeCarouselTablet: 'sap/ui/demo/cart/img/ShopCarouselTablet.jpg',
+				welcomeCarouselCreditCard: 'sap/ui/demo/cart/img/ShopCarouselCreditCard.jpg',
+				Promoted: [],
+				Viewed: [],
+				Favorite: [],
+				Currency: "EUR"
+			});
+			this.getView().setModel(oViewModel, "view");
+			this.getRouter().attachRouteMatched(this._onRouteMatched, this);
+&nbsp;
+			// select random carousel page at start
+			var oWelcomeCarousel = this.byId("welcomeCarousel");
+			var iRandomIndex = Math.floor(Math.abs(Math.random()) * oWelcomeCarousel.getPages().length);
+			oWelcomeCarousel.setActivePage(oWelcomeCarousel.getPages()[iRandomIndex]);
+		},
+&nbsp;
+		/**
+		 * lifecycle hook that will initialize the welcome carousel
+		 */
+		onAfterRendering: function () {
+			this.onCarouselPageChanged();
+		},
+&nbsp;
+		_onRouteMatched: function (oEvent) {
+			var sRouteName = oEvent.getParameter("name");
+&nbsp;
+			// always display two columns for home screen
+			if (sRouteName === "home") {
+				this._setLayout("Two");
+			}
+			// we do not need to call this function if the url hash refers to product or cart product
+			<span class="missing-if-branch" title="else path not taken" >E</span>if (sRouteName !== "product" &amp;&amp; sRouteName !== "cartProduct") {
+				var aPromotedData = this.getView().getModel("view").getProperty("/Promoted");
+				if (!aPromotedData.length) {
+					var oModel = this.getModel();
+					Object.keys(this._mFilters).forEach(function (sFilterKey) {
+						oModel.read("/FeaturedProducts", {
+							urlParameters: {
+								"$expand": "Product"
+							},
+							filters: this._mFilters[sFilterKey],
+							success: function (oData) {
+								this.getModel("view").setProperty("/" + sFilterKey, oData.results);
+								if (sFilterKey === "Promoted") {
+									this._selectPromotedItems();
+								}
+							}.bind(this)
+						});
+					}.bind(this));
+				}
+			}
+		},
+&nbsp;
+		/**
+		 * clear previous animation and initialize the loop animation of the welcome carousel
+		 */
+		onCarouselPageChanged: function () {
+			clearTimeout(this._iCarouselTimeout);
+			this._iCarouselTimeout = setTimeout(<span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >				var oWelcomeCarousel = this.byId("welcomeCarousel");</span>
+<span class="cstat-no" title="statement not covered" >				if (oWelcomeCarousel) {</span>
+<span class="cstat-no" title="statement not covered" >					oWelcomeCarousel.next();</span>
+<span class="cstat-no" title="statement not covered" >					this.onCarouselPageChanged();</span>
+				}
+			}.bind(this), this._iCarouselLoopTime);
+		},
+&nbsp;
+		/**
+		 * Event handler to determine which link the user has clicked
+		 * @param {sap.ui.base.Event} oEvent the press event of the link
+		 */
+		onSelectProduct: <span class="fstat-no" title="function not covered" >function (oEvent) {</span>
+<span class="cstat-no" title="statement not covered" >			var oContext = oEvent.getSource().getBindingContext("view");</span>
+<span class="cstat-no" title="statement not covered" >			var sCategoryId = oContext.getProperty("Product/Category");</span>
+<span class="cstat-no" title="statement not covered" >			var sProductId = oContext.getProperty("Product/ProductId");</span>
+<span class="cstat-no" title="statement not covered" >			this.getRouter().navTo("product", {</span>
+				id: sCategoryId,
+				productId: sProductId
+			});
+		},
+&nbsp;
+		/**
+		 * Navigates to the category overview on phones
+		 */
+		onShowCategories: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >			this.getRouter().navTo("categories");</span>
+		},
+&nbsp;
+		/**
+		 * Event handler to determine which button was clicked
+		 * @param {sap.ui.base.Event} oEvent the button press event
+		 */
+		onAddToCart: <span class="fstat-no" title="function not covered" >function (oEvent) {</span>
+<span class="cstat-no" title="statement not covered" >			var oResourceBundle = this.getModel("i18n").getResourceBundle();</span>
+<span class="cstat-no" title="statement not covered" >			var oProduct = oEvent.getSource().getBindingContext("view").getObject();</span>
+<span class="cstat-no" title="statement not covered" >			var oCartModel = this.getModel("cartProducts");</span>
+<span class="cstat-no" title="statement not covered" >			cart.addToCart(oResourceBundle, oProduct, oCartModel);</span>
+		},
+&nbsp;
+		/**
+		 * Navigate to the generic cart view
+		 * @param {sap.ui.base.Event} @param oEvent the button press event
+		 */
+		onToggleCart: <span class="fstat-no" title="function not covered" >function (oEvent) {</span>
+<span class="cstat-no" title="statement not covered" >			var bPressed = oEvent.getParameter("pressed");</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >			this._setLayout(bPressed ? "Three" : "Two");</span>
+<span class="cstat-no" title="statement not covered" >			this.getRouter().navTo(bPressed ? "cart" : "home");</span>
+		},
+&nbsp;
+		/**
+		 * Select two random elements from the promoted products array
+		 * @private
+		 */
+		_selectPromotedItems: function () {
+			var aPromotedItems = this.getView().getModel("view").getProperty("/Promoted");
+			var iRandom1, iRandom2 = Math.floor(Math.random() * aPromotedItems.length);
+			do {
+				iRandom1 = Math.floor(Math.random() * aPromotedItems.length);
+			} while (iRandom1 === iRandom2);
+			this.getModel("view").setProperty("/Promoted", [aPromotedItems[iRandom1], aPromotedItems[iRandom2]]);
+		}
+	});
+});
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Feb 19 2020 11:34:54 GMT+0200 (Eastern European Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
