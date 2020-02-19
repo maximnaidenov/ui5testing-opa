@@ -13,23 +13,17 @@ sap.ui.define([
 			viewName : "Home",
 
 			actions : {
-				iPressOnTheFlatScreensCategory : function () {
-					return this.waitFor({
-						controlType : "sap.m.StandardListItem",
-						matchers : new BindingPath({path : "/ProductCategories('FS')"}),
-						actions : new Press(),
-						errorMessage : "The category list does not contain required selection"
-					});
-				}
+				// Add your iPressOnTheFlatScreensCategory function here
+
 			},
 
 			assertions: {
-				iShouldSeeTheCategoryList : function () {
+				iShouldSeeTheCategoryList :  function () {
 					return this.waitFor({
-						id : "categoryList",
-						success : function () {
-							Opa5.assert.ok(true, "Found the category List");
-						}
+						// your selector
+						// success : function () {
+						// 	Opa5.assert.ok(true, "Found the category List");
+						// }
 					});
 				}
 			}

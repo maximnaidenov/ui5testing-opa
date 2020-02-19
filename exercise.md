@@ -240,9 +240,7 @@ sap.ui.define([
 	"sap/ui/test/matchers/Properties"
 ], function (
 	Opa5,
-	Press,
-	Properties,
-	I18NText) {
+	Properties) {
 	"use strict";
 
 	Opa5.createPageObjects({

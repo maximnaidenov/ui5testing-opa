@@ -19,5 +19,9 @@ To run tests in watch mode:
 ```bash
 npm run test-start
 ```
+
+# OPA Exercise tutorial
+The tutorial for executing the exercise can be found <a href="exercise.md">here</a>
+
 # Support
 This project is provided "as-is": there is no guarantee that raised issues will be answered or addressed in future releases.
