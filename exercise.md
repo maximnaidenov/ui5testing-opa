@@ -181,10 +181,15 @@ To create the selectors we can use OPA Test Recorder. It can be started via keyb
 The TestRecorder should be loaded in a pop-up. Then you can use it for creating needed selectors. 
 Here you have to add the action for selecting category and an assertion for loaded category list.
 To create the press action you can easily generate and copy it from Test Recorder. Just right click on the required field and select "Press". Then a snipped will appear and you can copy directly in your test code. 
-![test recorder 01](img/test_recorder_01.png)
+<p align="center">
+	<img src="img/test_recorder_01.png" alt="test recorder" width="800"/>
+</p>
 
 For the assertion you just have to find the category list item in TestRecorder and to get the selector. Then add the success assertion.
-![test recorder 02](img/test_recorder_02.png)
+<!-- ![test recorder 02](img/test_recorder_02.png) -->
+<p align="center">
+	<img src="img/test_recorder_02.png" alt="test recorder" width="800"/>
+</p>
 
 ```js
 sap.ui.define([
@@ -202,17 +207,17 @@ sap.ui.define([
 			viewName : "Home",
 
 			actions : {
-				iPressOnTheFlatScreensCategory : 
+				// Add your iPressOnTheFlatScreensCategory function here
 
 			},
 
 			assertions: {
 				iShouldSeeTheCategoryList :  function () {
 					return this.waitFor({
-						<selector>
-						success : function () {
-							Opa5.assert.ok(true, "Found the category List");
-						}
+						// your selector
+						// success : function () {
+						// 	Opa5.assert.ok(true, "Found the category List");
+						// }
 					});
 				}
 			}
@@ -232,9 +237,7 @@ You can again use TestRecorder to generate and copy needed selectors.
 ```js
 sap.ui.define([
 	"sap/ui/test/Opa5",
-	"sap/ui/test/actions/Press",
-	"sap/ui/test/matchers/Properties",
-	"sap/ui/test/matchers/I18NText"
+	"sap/ui/test/matchers/Properties"
 ], function (
 	Opa5,
 	Press,
@@ -247,9 +250,9 @@ sap.ui.define([
 			viewName: "Product",
 
 			assertions: {
-				iShouldSeeTheProductTitle: 
+				// Add your iShouldSeeTheProductTitle function here 
 
-				iShouldBeTakenToTheFlatScreensCategory:
+				// Add your iShouldBeTakenToTheFlatScreensCategory function here
 
 			}
 		}
@@ -259,4 +262,4 @@ sap.ui.define([
 
 **Step 8**
 
-Run OPA tests by calling file **webapp/test/integration/opaTests.qunit.html** to execute all journeys.
+Run OPA tests by calling **npm run test** to execute all journeys.

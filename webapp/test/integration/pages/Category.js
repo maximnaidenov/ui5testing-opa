@@ -1,7 +1,6 @@
 sap.ui.define([
 	"sap/ui/test/Opa5",
 	"sap/ui/test/matchers/BindingPath",
-	"sap/ui/test/matchers/Properties",
 	"sap/ui/test/actions/Press"
 ], function (
 	Opa5,
@@ -13,17 +12,6 @@ sap.ui.define([
 	Opa5.createPageObjects({
 		onTheCategoryPage : {
 			viewName: "Category",
-
-			actions: {
-				iPressOnTheFirstProduct: function () {
-					return this.waitFor({
-						controlType: "sap.m.ObjectListItem",
-						matchers: new BindingPath({path: "/Products('HT-1254')"}),
-						actions: new Press(),
-						errorMessage: "The product list does not contain required selection"
-					});
-				}
-			},
 
 			assertions: {
 				iShouldSeeTheProductList: function () {

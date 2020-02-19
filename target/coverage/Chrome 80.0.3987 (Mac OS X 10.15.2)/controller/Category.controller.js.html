@@ -1,0 +1,1076 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for controller/Category.controller.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">controller/</a> Category.controller.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">27.07% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>36/133</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4.44% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>2/45</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">44% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>11/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">27.07% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>36/133</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">123×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">123×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">sap.ui.define([
+	"./BaseController",
+	"../model/formatter",
+	"sap/ui/Device",
+	"sap/ui/model/Filter",
+	"sap/ui/model/FilterOperator",
+	"sap/m/MessageToast",
+	"sap/ui/model/json/JSONModel",
+	"sap/ui/core/Fragment"
+], function (
+	BaseController,
+	formatter,
+	Device,
+	Filter,
+	FilterOperator,
+	MessageToast,
+	JSONModel,
+	Fragment) {
+	"use strict";
+&nbsp;
+	return BaseController.extend("sap.ui.demo.cart.controller.Category", {
+		formatter : formatter,
+		// Define filterPreviousValues as global variables because they need to be accessed from different functions
+		_iLowFilterPreviousValue: 0,
+		_iHighFilterPreviousValue: 5000,
+&nbsp;
+		onInit: function () {
+			var oViewModel = new JSONModel({
+				Suppliers: []
+			});
+			this.getView().setModel(oViewModel, "view");
+			var oComponent = this.getOwnerComponent();
+			this._oRouter = oComponent.getRouter();
+			this._oRouter.getRoute("category").attachMatched(this._loadCategories, this);
+			this._oRouter.getRoute("productCart").attachMatched(this._loadCategories, this);
+			this._oRouter.getRoute("product").attachMatched(this._loadCategories, this);
+			this._oRouter.getRoute("comparison").attachMatched(this._loadCategories, this);
+			this._oRouter.getRoute("comparisonCart").attachMatched(this._loadCategories, this);
+		},
+&nbsp;
+		_loadCategories: function(oEvent) {
+			var bSmallScreen = this.getModel("appView").getProperty("/smallScreenMode"),
+				sRouteName = oEvent.getParameter("name");
+&nbsp;
+			// switch to first column in full screen mode for category route on small devices
+			this._setLayout(bSmallScreen &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >sRouteName === "category" </span>? <span class="branch-0 cbranch-no" title="branch not covered" >"One" </span>: "Two");
+&nbsp;
+			var oModel = this.getModel();
+			this._loadSuppliers();
+			var oProductList = this.byId("productList");
+			var oBinding = oProductList.getBinding("items");
+			oBinding.attachDataReceived(this.fnDataReceived, this);
+			var sId = oEvent.getParameter("arguments").id;
+			this._sProductId = oEvent.getParameter("arguments").productId;
+			// the binding should be done after insuring that the metadata is loaded successfully
+			oModel.metadataLoaded().then(function () {
+				var oView = this.getView(),
+					sPath = "/" + this.getModel().createKey("ProductCategories", {
+					Category: sId
+				});
+				oView.bindElement({
+					path : sPath,
+					parameters: {
+						expand: "Products"
+					},
+					events: {
+						dataRequested: function () {
+							oView.setBusy(true);
+						},
+						dataReceived: function () {
+							oView.setBusy(false);
+						}
+					}
+				});
+			}.bind(this));
+		},
+&nbsp;
+		/**
+		 * Create a unique array of suppliers to be used in the supplier flter option
+		 * @private
+		 */
+		_loadSuppliers: function () {
+			var oModel = this.getModel();
+			oModel.read("/Products", {
+				success: function (oData) {
+					var aProducts = oData.results,
+						aSuppliers = [];
+&nbsp;
+					aProducts.forEach(function (oProduct) {
+						aSuppliers.push(oProduct.SupplierName);
+					});
+					// remove duplications from the suppliers array and sort it
+					var aUniqueSuppliers = aSuppliers.filter(function (sName, iIndex, aUniqueSuppliers) {
+						return aUniqueSuppliers.indexOf(sName) === iIndex;
+					}).sort();
+&nbsp;
+					// create the unique suppliers array as array of of objects
+					aUniqueSuppliers.map(function (sSupplierName, iIndex, aUniqueSuppliers) {
+						aUniqueSuppliers[iIndex] = {SupplierName: sSupplierName};
+					});
+					this.getModel("view").setProperty("/Suppliers", aUniqueSuppliers);
+				}.bind(this)
+			});
+&nbsp;
+			this._clearComparison();
+		},
+&nbsp;
+		fnDataReceived: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >			var oList = this.byId("productList");</span>
+<span class="cstat-no" title="statement not covered" >			var aListItems = oList.getItems();</span>
+<span class="cstat-no" title="statement not covered" >			aListItems.some(<span class="fstat-no" title="function not covered" >function(oItem) {</span></span>
+<span class="cstat-no" title="statement not covered" >				if (oItem.getBindingContext().sPath === "/Products('" + this._sProductId + "')") {</span>
+<span class="cstat-no" title="statement not covered" >					oList.setSelectedItem(oItem);</span>
+<span class="cstat-no" title="statement not covered" >					return true;</span>
+				}
+			}.bind(this));
+		},
+&nbsp;
+		/**
+		 * Event handler to determine which list item is selected
+		 * @param {sap.ui.base.Event} oEvent the list select event
+		 */
+		onProductListSelect : <span class="fstat-no" title="function not covered" >function (oEvent) {</span>
+<span class="cstat-no" title="statement not covered" >			this._showProduct(oEvent);</span>
+		},
+&nbsp;
+		/**
+		 * Event handler to determine which sap.m.ObjectListItem is pressed
+		 * @param {sap.ui.base.Event} oEvent the sap.m.ObjectListItem press event
+		 */
+&nbsp;
+&nbsp;
+		onProductDetails: <span class="fstat-no" title="function not covered" >function (oEvent) {</span>
+<span class="cstat-no" title="statement not covered" >			var oBindContext;</span>
+<span class="cstat-no" title="statement not covered" >			if (Device.system.phone) {</span>
+<span class="cstat-no" title="statement not covered" >				oBindContext = oEvent.getSource().getBindingContext();</span>
+			} else {
+<span class="cstat-no" title="statement not covered" >				oBindContext = oEvent.getSource().getSelectedItem().getBindingContext();</span>
+			}
+<span class="cstat-no" title="statement not covered" >			var oModel = oBindContext.getModel();</span>
+<span class="cstat-no" title="statement not covered" >			var sCategoryId = oModel.getData(oBindContext.getPath()).Category;</span>
+<span class="cstat-no" title="statement not covered" >			var sProductId = oModel.getData(oBindContext.getPath()).ProductId;</span>
+&nbsp;
+			// keep the cart context when showing a product
+<span class="cstat-no" title="statement not covered" >			var bCartVisible = this.getModel("appView").getProperty("/layout").startsWith("Three");</span>
+<span class="cstat-no" title="statement not covered" >			this._setLayout("Two");</span>
+<span class="cstat-no" title="statement not covered" >			this._oRouter.navTo(bCartVisible ? "productCart" : "product", {</span>
+				id: sCategoryId,
+				productId: sProductId
+			}, !Device.system.phone);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >			this._unhideMiddlePage();</span>
+		},
+&nbsp;
+		/** Apply selected filters to the category list and update text and visibility of the info toolbar
+		 * @param oEvent {sap.ui.base.Event} the press event of the sap.m.Button
+		 * @private
+		 */
+		_applyFilter : <span class="fstat-no" title="function not covered" >function (oEvent) {</span>
+<span class="cstat-no" title="statement not covered" >			var oList = this.byId("productList"),</span>
+				oBinding = oList.getBinding("items"),
+				aSelectedFilterItems = oEvent.getParameter("filterItems"),
+				oCustomFilter =  this.byId("categoryFilterDialog").getFilterItems()[1],
+				oFilter,
+				oCustomKeys = {},
+				aFilters = [],
+				aAvailableFilters = [],
+				aPriceFilters = [],
+				aSupplierFilters = [];
+&nbsp;
+			// Add the slider custom filter if the user selects some values
+<span class="cstat-no" title="statement not covered" >			if (oCustomFilter.getCustomControl().getAggregation("content")[0].getValue() !== oCustomFilter.getCustomControl().getAggregation("content")[0].getMin() ||</span>
+				oCustomFilter.getCustomControl().getAggregation("content")[0].getValue2() !== oCustomFilter.getCustomControl().getAggregation("content")[0].getMax()) {
+<span class="cstat-no" title="statement not covered" >				aSelectedFilterItems.push(oCustomFilter);</span>
+			}
+<span class="cstat-no" title="statement not covered" >			aSelectedFilterItems.forEach(<span class="fstat-no" title="function not covered" >function (oItem) {</span></span>
+<span class="cstat-no" title="statement not covered" >				var sFilterKey = oItem.getProperty("key"),</span>
+					iValueLow,
+					iValueHigh;
+<span class="cstat-no" title="statement not covered" >				switch (sFilterKey) {</span>
+					case "Available":
+<span class="cstat-no" title="statement not covered" >						oFilter = new Filter("Status", FilterOperator.EQ, "A");</span>
+<span class="cstat-no" title="statement not covered" >						aAvailableFilters.push(oFilter);</span>
+<span class="cstat-no" title="statement not covered" >						break;</span>
+&nbsp;
+					case "OutOfStock":
+<span class="cstat-no" title="statement not covered" >						oFilter = new Filter("Status", FilterOperator.EQ, "O");</span>
+<span class="cstat-no" title="statement not covered" >						aAvailableFilters.push(oFilter);</span>
+<span class="cstat-no" title="statement not covered" >						break;</span>
+&nbsp;
+					case "Discontinued":
+<span class="cstat-no" title="statement not covered" >						oFilter = new Filter("Status", FilterOperator.EQ, "D");</span>
+<span class="cstat-no" title="statement not covered" >						aAvailableFilters.push(oFilter);</span>
+<span class="cstat-no" title="statement not covered" >						break;</span>
+&nbsp;
+					case "Price":
+<span class="cstat-no" title="statement not covered" >						iValueLow = oItem.getCustomControl().getAggregation("content")[0].getValue();</span>
+<span class="cstat-no" title="statement not covered" >						iValueHigh = oItem.getCustomControl().getAggregation("content")[0].getValue2();</span>
+<span class="cstat-no" title="statement not covered" >						oFilter = new Filter("Price", FilterOperator.BT, iValueLow, iValueHigh);</span>
+<span class="cstat-no" title="statement not covered" >						aPriceFilters.push(oFilter);</span>
+<span class="cstat-no" title="statement not covered" >						oCustomKeys["priceKey"] = {Price: true};</span>
+<span class="cstat-no" title="statement not covered" >						break;</span>
+&nbsp;
+					default:
+<span class="cstat-no" title="statement not covered" >						oFilter = new Filter("SupplierName", FilterOperator.EQ, sFilterKey);</span>
+<span class="cstat-no" title="statement not covered" >						aSupplierFilters.push(oFilter);</span>
+&nbsp;
+				}
+			});
+<span class="cstat-no" title="statement not covered" >			if (aAvailableFilters.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >				aFilters.push(new Filter({filters: aAvailableFilters}));</span>
+			}
+<span class="cstat-no" title="statement not covered" >			if (aPriceFilters.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >				aFilters.push(new Filter({filters: aPriceFilters}));</span>
+			}
+<span class="cstat-no" title="statement not covered" >			if (aSupplierFilters.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >				aFilters.push(new Filter({filters: aSupplierFilters}));</span>
+			}
+<span class="cstat-no" title="statement not covered" >			oFilter = new Filter({filters: aFilters, and: true});</span>
+<span class="cstat-no" title="statement not covered" >			if (aFilters.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >				oBinding.filter(oFilter);</span>
+<span class="cstat-no" title="statement not covered" >				this.byId("categoryInfoToolbar").setVisible(true);</span>
+<span class="cstat-no" title="statement not covered" >				var sText = this.getResourceBundle().getText("filterByText") + " ";</span>
+<span class="cstat-no" title="statement not covered" >				var sSeparator = "";</span>
+<span class="cstat-no" title="statement not covered" >				var oFilterKey = oEvent.getParameter("filterCompoundKeys");</span>
+<span class="cstat-no" title="statement not covered" >				var oKeys = Object.assign(oFilterKey, oCustomKeys);</span>
+<span class="cstat-no" title="statement not covered" >				for (var key in oKeys) {</span>
+<span class="cstat-no" title="statement not covered" >					if (oKeys.hasOwnProperty(key)) {</span>
+<span class="cstat-no" title="statement not covered" >						sText = sText + sSeparator  + this.getResourceBundle().getText(key, [this._iLowFilterPreviousValue, this._iHighFilterPreviousValue]);</span>
+<span class="cstat-no" title="statement not covered" >						sSeparator = ", ";</span>
+					}
+				}
+<span class="cstat-no" title="statement not covered" >				this.byId("categoryInfoToolbarTitle").setText(sText);</span>
+			} else {
+<span class="cstat-no" title="statement not covered" >				oBinding.filter(null);</span>
+<span class="cstat-no" title="statement not covered" >				this.byId("categoryInfoToolbar").setVisible(false);</span>
+<span class="cstat-no" title="statement not covered" >				this.byId("categoryInfoToolbarTitle").setText("");</span>
+			}
+		},
+&nbsp;
+		/**
+		 * Open the filter dialog
+		 */
+		onFilter: <span class="fstat-no" title="function not covered" >function () {</span>
+			// load asynchronous XML fragment
+<span class="cstat-no" title="statement not covered" >			if (!this.byId("categoryFilterDialog")) {</span>
+<span class="cstat-no" title="statement not covered" >				Fragment.load({</span>
+					id: this.getView().getId(),
+					name: "sap.ui.demo.cart.view.CategoryFilterDialog",
+					controller: this
+				}).then(<span class="fstat-no" title="function not covered" >function(oDialog){</span>
+					// connect dialog to the root view of this component (models, lifecycle)
+<span class="cstat-no" title="statement not covered" >					this.getView().addDependent(oDialog);</span>
+<span class="cstat-no" title="statement not covered" >					oDialog.addStyleClass(this.getOwnerComponent().getContentDensityClass());</span>
+<span class="cstat-no" title="statement not covered" >					oDialog.open();</span>
+				}.bind(this));
+			} else {
+<span class="cstat-no" title="statement not covered" >				this.byId("categoryFilterDialog").open();</span>
+			}
+		},
+&nbsp;
+		/**
+		 * Updates the previous slider values
+		 * @param {sap.ui.base.Event} oEvent the press event of the sap.m.Button
+		 */
+		handleConfirm: <span class="fstat-no" title="function not covered" >function (oEvent) {</span>
+<span class="cstat-no" title="statement not covered" >			var oCustomFilter = this.byId("categoryFilterDialog").getFilterItems()[1];</span>
+<span class="cstat-no" title="statement not covered" >			var oSlider = oCustomFilter.getCustomControl().getAggregation("content")[0];</span>
+<span class="cstat-no" title="statement not covered" >			this._iLowFilterPreviousValue = oSlider.getValue();</span>
+<span class="cstat-no" title="statement not covered" >			this._iHighFilterPreviousValue = oSlider.getValue2();</span>
+<span class="cstat-no" title="statement not covered" >			this._applyFilter(oEvent);</span>
+		},
+&nbsp;
+		/**
+		 * Sets the slider values to the previous ones
+		 * Updates the filter count
+		 */
+		handleCancel: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >			var oCustomFilter = this.byId("categoryFilterDialog").getFilterItems()[1];</span>
+<span class="cstat-no" title="statement not covered" >			var oSlider = oCustomFilter.getCustomControl().getAggregation("content")[0];</span>
+<span class="cstat-no" title="statement not covered" >			oSlider.setValue(this._iLowFilterPreviousValue).setValue2(this._iHighFilterPreviousValue);</span>
+<span class="cstat-no" title="statement not covered" >			if (this._iLowFilterPreviousValue &gt; oSlider.getMin() || this._iHighFilterPreviousValue !== oSlider.getMax()) {</span>
+<span class="cstat-no" title="statement not covered" >				oCustomFilter.setFilterCount(1);</span>
+			} else {
+<span class="cstat-no" title="statement not covered" >				oCustomFilter.setFilterCount(0);</span>
+			}
+		},
+&nbsp;
+		/**
+		 * Updates filter count if there is a change in one of the slider values
+		 * @param {sap.ui.base.Event} oEvent the change event of the sap.m.RangeSlider
+		 */
+		handleChange: <span class="fstat-no" title="function not covered" >function (oEvent) {</span>
+<span class="cstat-no" title="statement not covered" >			var oCustomFilter = this.byId("categoryFilterDialog").getFilterItems()[1];</span>
+<span class="cstat-no" title="statement not covered" >			var oSlider = oCustomFilter.getCustomControl().getAggregation("content")[0];</span>
+<span class="cstat-no" title="statement not covered" >			var iLowValue = oEvent.getParameter("range")[0];</span>
+<span class="cstat-no" title="statement not covered" >			var iHighValue = oEvent.getParameter("range")[1];</span>
+<span class="cstat-no" title="statement not covered" >			if (iLowValue !== oSlider.getMin() || iHighValue !== oSlider.getMax()) {</span>
+<span class="cstat-no" title="statement not covered" >				oCustomFilter.setFilterCount(1);</span>
+			} else {
+<span class="cstat-no" title="statement not covered" >				oCustomFilter.setFilterCount(0);</span>
+			}
+		},
+&nbsp;
+		/**
+		 * Reset the price custom filter
+		 */
+		handleResetFilters: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >			var oCustomFilter = this.byId("categoryFilterDialog").getFilterItems()[1];</span>
+<span class="cstat-no" title="statement not covered" >			var oSlider = oCustomFilter.getCustomControl().getAggregation("content")[0];</span>
+<span class="cstat-no" title="statement not covered" >			oSlider.setValue(oSlider.getMin());</span>
+<span class="cstat-no" title="statement not covered" >			oSlider.setValue2(oSlider.getMax());</span>
+<span class="cstat-no" title="statement not covered" >			oCustomFilter.setFilterCount(0);</span>
+		},
+&nbsp;
+		/**
+		 * Navigation to comparison view
+		 * @param {sap.ui.base.Event} oEvent the press event of the link text in sap.m.ObjectListItem
+		 */
+		compareProducts: <span class="fstat-no" title="function not covered" >function (oEvent) {</span>
+<span class="cstat-no" title="statement not covered" >			var oProduct = oEvent.getSource().getBindingContext().getObject();</span>
+<span class="cstat-no" title="statement not covered" >			var sItem1Id = this.getModel("comparison").getProperty("/item1");</span>
+<span class="cstat-no" title="statement not covered" >			var sItem2Id = this.getModel("comparison").getProperty("/item2");</span>
+<span class="cstat-no" title="statement not covered" >			this._oRouter.navTo("comparison", {</span>
+				id : oProduct.Category,
+				item1Id : (sItem1Id ? sItem1Id : oProduct.ProductId),
+				item2Id : (sItem1Id &amp;&amp; sItem1Id != oProduct.ProductId ? oProduct.ProductId : sItem2Id)
+			}, true);
+		},
+		/**
+		 * Always navigates back to category overview
+		 * @override
+		 */
+		onBack: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >			this.getRouter().navTo("categories");</span>
+		}
+	});
+});</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Feb 19 2020 11:34:54 GMT+0200 (Eastern European Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
