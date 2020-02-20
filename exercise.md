@@ -1,36 +1,32 @@
-# OPA-exercise
-
-## Integration Test with OPA
-
-In this exercise we will setup the required project content for the integration tests using OPA5
+# OPA5 Exercise
 
 **Step 1**
 
-We will create the following folders and files under the path **webapp/test**
+Create the following folders and files under the path **webapp/test**
 
-We add a new folder "integration" below the "test" folder, where we put our journeys.
+Add a new folder "integration" below the "test" folder, where we put our journeys.
 
-We will put all the page objects into the "pages" subfolder.
+Put all the page objects into the "pages" subfolder.
 
-A journey includes a series of OPA tests that belong to the same functionality and should be executed together. We will have 2 journey files:
-- **webapp/test/integration/ProductJourney.js** - A series of tests validating product display.
-- **webapp/test/integration/AllJourneys.js** - This is a convenience journey that will call all journeys specified.
+A journey contains a sequence of OPA steps that follow a test scenario.
+- **webapp/test/integration/ProductJourney.js** - A journey that validates product display.
+- **webapp/test/integration/AllJourneys.js** - Includes all journeys and runs them sequentially
 
 Page objects help structuring the integration tests:
-- **webapp/test/integration/pages/Home.js** - containing actions and assertions which could be used for test cases of the home page.
-- **webapp/test/integration/pages/Category.js** - containing actions and assertions which could be used for test cases of the product categories.
-- **webapp/test/integration/pages/Product.js** - containing actions and assertions which could be used for test cases of the products in the app.
+- **webapp/test/integration/pages/Home.js** - containing actions and assertions for the home view.
+- **webapp/test/integration/pages/Category.js** - containing actions and assertions for the product categories view.
+- **webapp/test/integration/pages/Product.js** - containing actions and assertions for the product view.
 
-We need a html file containing the test suite for all OPA tests of the app. We call this file **webapp/test/integration/opaTests.qunit.html** We can execute all journeys by calling this test suite file.
+To run all journeys we need an html file: **webapp/test/integration/opaTests.qunit.html**
 
-If you have serveral test suites e.g. one for OPA test, another for unit tests and you would like to integrate the execution of the test into the CI (Continuous Integration) Build, create an html file called by the Selenium/QUnit framework to retrieve the test suites:
+If you have serveral test suites e.g. one for OPA test, another for unit tests and you would like to integrate the execution of the test into the CI (Continuous Integration) Build, create an html that includes them:
 - **webapp/test/testsuite.qunit.html**
 
 **Step 2**
 
 Implement **webapp/test/testsuite.qunit.html**
 
-This file will be called by the Selenium/QUnit framework to retrieve all the test suites in the app
+This file will be called by the test runner to execute all included tests.
 
 ```html
 <!DOCTYPE html>
@@ -178,7 +174,7 @@ To create the selectors we can use OPA Test Recorder. It can be started via keyb
  - For Windows: Ctrl+Alt+Shift+T
  - For Mac: Control+Option+Shift+T
 
-The TestRecorder should be loaded in a pop-up. Then you can use it for creating needed selectors. 
+The TestRecorder should be loaded in a pop-up. Then you can use it for resolving the selectors. 
 Here you have to add the action for selecting category and an assertion for loaded category list.
 To create the press action you can easily generate and copy it from Test Recorder. Just right click on the required field and select "Press". Then a snipped will appear and you can copy directly in your test code. 
 <p align="center">
@@ -251,7 +247,6 @@ sap.ui.define([
 				// Add your iShouldSeeTheProductTitle function here 
 
 				// Add your iShouldBeTakenToTheFlatScreensCategory function here
-
 			}
 		}
 	});
