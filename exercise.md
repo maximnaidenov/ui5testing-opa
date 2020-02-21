@@ -119,7 +119,7 @@ sap.ui.define([
 
 **Step 5**
 
-Implement **webapp/test/integration/ProdcutJourney.js** 
+Implement **webapp/test/integration/ProductJourney.js** 
 
 We will create a single test to validate that the home screen, categories and products are loaded correctly.
 The scenario follows these steps:
