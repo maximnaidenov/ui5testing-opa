@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@ui5/cli": "^1.5.4",
-    "karma": "^4.1.0",
+    "karma": "^6.4.2",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.2",
     "karma-firefox-launcher": "1.1.0",
